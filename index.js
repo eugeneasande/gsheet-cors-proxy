@@ -1,12 +1,9 @@
-const express = require("express");
-const cors = require("cors");
-const fetch = require("node-fetch");
-const app = express();
+import express from "express";
+import fetch from "node-fetch";
 
+const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Allow all origins
-app.use(cors());
 app.use(express.json());
 
 app.post("/submit", async (req, res) => {
